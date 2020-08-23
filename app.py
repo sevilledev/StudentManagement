@@ -158,6 +158,7 @@ def deleteData(student_psw):
             student.pop(5*i)
             student.pop(5*i)
             student.pop(5*i)
+            print("Qeyd etdiyiniz kodlu tələbənin dataları sistemdən silindi! Sistemdə var olan tələbələrin dataları:")
             print(student)
             break
         else:
