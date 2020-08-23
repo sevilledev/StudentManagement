@@ -55,11 +55,11 @@ if n.isdigit():
             password = input("Şifrənizi yazın: ")
             if password.isdigit() and 100 <= int(password) <= 999:
                 print("Qeydiyyatınız uğurla başa çatdı!")
-                print("Tələbələrin datalarının sistemə yerləşdirilmə prosesi sona çatdı!")
                 break
             else:
                 print("Şifrə 3 rəqəmli ədəd olmalıdır!")
-
+                
+        print("Tələbələrin datalarının sistemə yerləşdirilmə prosesi sona çatdı!")
         s = createStudent(name, surname, email, telNumber, password)
 else:
     print("Tələbə sayı rəqəm vəya ədəd olmalıdır!")
