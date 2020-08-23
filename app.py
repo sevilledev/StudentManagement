@@ -63,6 +63,8 @@ if n.isdigit():
         s = createStudent(name, surname, email, telNumber, password)
 else:
     print("Tələbə sayı rəqəm vəya ədəd olmalıdır!")
+    
+print("Tələbələrin datalarının sistemə yerləşdirilmə prosesi sona çatdı!")
 
 # Tələbə adına görə tələbə məlumatlarının göstərilmə funksiyası:
 
