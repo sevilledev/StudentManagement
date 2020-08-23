@@ -28,28 +28,28 @@ if n.isdigit():
             if name.isalpha():
                 break
             else:
-                print("Adınızı düzgün daxil edin!")
+                print("Adınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
 
         while True:
             surname = input("Soyadınızı daxil edin: ")
             if surname.isalpha():
                 break
             else:
-                print("Soyadınızı düzgün daxil edin!")
+                print("Soyadınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
 
         while True:
             email = input("Email adresinizi daxil edin: ")
             if "@" in email:
                 break
             else:
-                print("Emailinizi düzgün daxil edin!")
+                print("Düzgün email adresi daxil edin!")
 
         while True:
             telNumber = input("Əlaqə nömrənizi daxil edin: +994")
             if telNumber.isdigit() and len(telNumber) == 9:
                 break
             else:
-                print("Əlaqə nömrənizi düzgün daxil edin!")
+                print("Əlaqə nömrəniz 9 rəqəmli olmalıdır!(nümunə:501234567)")
 
         while True:
             password = input("Şifrənizi yazın: ")
@@ -105,7 +105,7 @@ def changeData(student_psw):
                     student[5*i] = new_name
                     break
                 else:
-                    print("Yeni adınız standartlara uyğun deyil!")
+                    print("Yeni adınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
 
             while True:
                 new_surname = input("Yeni soyadınızı daxil edin: ")
@@ -113,7 +113,7 @@ def changeData(student_psw):
                     student[5*i+1] = new_surname
                     break
                 else:
-                    print("Yeni soyadınız standartlara uyğun deyil!")
+                    print("Yeni soyadınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
 
             while True:
                 new_email = input("Yeni email adresinizi daxil edin: ")
@@ -129,7 +129,7 @@ def changeData(student_psw):
                     student[5*i+3] = new_telNumber
                     break
                 else:
-                    print("Yeni əlaqə nömrəniz standartlara uyğun deyil!")
+                    print("Yeni Əlaqə nömrəniz 9 rəqəmli olmalıdır!(nümunə:501234567)")
 
             while True:
                 new_password = input("Şifrənizi yazın: ")
