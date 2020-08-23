@@ -180,7 +180,14 @@ for i in range(10):
             "Datasını görmək istədiyiniz tələbənin adını daxil edin: ")
         showData(name_input)
     elif data == "2":
-        allData()
+        elif data == "2":
+        secret_psw=int(input("4-rəqəmli gizli şifrəni daxil edin: "))
+        while True:
+            if secret_psw==2005:
+                allData()
+                break
+            else:
+                print("Yalnış şifrə!") 
     elif data == "3":
         psw_input = int(
             input("Datasını dəyişmək istədiyiniz tələbənin kodunu daxil edin: "))
