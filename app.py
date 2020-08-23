@@ -159,6 +159,7 @@ def deleteData(student_psw):
             student.pop(5*i)
             student.pop(5*i)
             student.pop(5*i)
+            n=n-5
             break
         else:
             pass
