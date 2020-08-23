@@ -154,6 +154,7 @@ def changeData(student_psw):
 
 
 def deleteData(student_psw):
+    global n
     for i in range(0, n):
         if student_psw == int(student[5*i+4]):
             student.pop(5*i)
@@ -162,6 +163,7 @@ def deleteData(student_psw):
             student.pop(5*i)
             student.pop(5*i)
             print("Daxil edilən koda uyğun tələbənin dataları sistemdən silindi!")
+            n -= 1
             break
         else:
             pass
