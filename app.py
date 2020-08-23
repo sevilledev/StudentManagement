@@ -23,40 +23,42 @@ n = input("Ümumi tələbə sayını daxil edin: ")
 if n.isdigit():
     n = int(n)
     for i in range(0, n):
-        name = input("Adınızı daxil edin: ")
-        if name.isalpha():
-            pass
-        else:
-            print("Adınızı düzgün daxil edin!")
-            break
+        while True:
+            name = input("Adınızı daxil edin: ")
+            if name.isalpha():
+                break
+            else:
+                print("Adınızı düzgün daxil edin!")
 
-        surname = input("Soyadınızı daxil edin: ")
-        if surname.isalpha():
-            pass
-        else:
-            print("Soyadınızı düzgün daxil edin!")
-            break
+        while True:
+            surname = input("Soyadınızı daxil edin: ")
+            if surname.isalpha():
+                break
+            else:
+                print("Soyadınızı düzgün daxil edin!")
 
-        email = input("Email adresinizi daxil edin: ")
-        if "@" in email:
-            pass
-        else:
-            print("Emailinizi düzgün daxil edin!")
-            break
+        while True:
+            email = input("Email adresinizi daxil edin: ")
+            if "@" in email:
+                break
+            else:
+                print("Emailinizi düzgün daxil edin!")
 
-        telNumber = input("Əlaqə nömrənizi daxil edin: ")
-        if telNumber.isdigit() and len(telNumber) == 9:
-            pass
-        else:
-            print("Əlaqə nömrənizi düzgün daxil edin!")
-            break
+        while True:
+            telNumber = input("Əlaqə nömrənizi daxil edin: +994")
+            if telNumber.isdigit() and len(telNumber) == 9:
+                break
+            else:
+                print("Əlaqə nömrənizi düzgün daxil edin!")
 
-        password = input("Şifrənizi yazın: ")
-        if password.isdigit() and 100 <= int(password) <= 999:
-            print("Qeydiyyatınız uğurla başa çatdı!")
-        else:
-            print("Şifrə 3 rəqəmli ədəd olmalıdır!")
-            break
+        while True:
+            password = input("Şifrənizi yazın: ")
+            if password.isdigit() and 100 <= int(password) <= 999:
+                print("Qeydiyyatınız uğurla başa çatdı!")
+                break
+            else:
+                print("Şifrə 3 rəqəmli ədəd olmalıdır!")
+
         s = createStudent(name, surname, email, telNumber, password)
 else:
     print("Tələbə sayı rəqəm vəya ədəd olmalıdır!")
@@ -97,41 +99,47 @@ def allData():
 def changeData(student_psw):
     for i in range(0, n):
         if student_psw == int(student[5*i+4]):
-            new_name = input("Yeni adınızı daxil edin: ")
-            if new_name.isalpha():
-                student[5*i] = new_name
-            else:
-                print("Yeni adınız standartlara uyğun deyil!")
-                break
+            while True:
+                new_name = input("Yeni adınızı daxil edin: ")
+                if new_name.isalpha():
+                    student[5*i] = new_name
+                    break
+                else:
+                    print("Yeni adınız standartlara uyğun deyil!")
 
-            new_surname = input("Yeni soyadınızı daxil edin: ")
-            if new_surname.isalpha():
-                student[5*i+1] = new_surname
-            else:
-                print("Yeni soyadınız standartlara uyğun deyil!")
-                break
+            while True:
+                new_surname = input("Yeni soyadınızı daxil edin: ")
+                if new_surname.isalpha():
+                    student[5*i+1] = new_surname
+                    break
+                else:
+                    print("Yeni soyadınız standartlara uyğun deyil!")
 
-            new_email = input("Yeni email adresinizi daxil edin: ")
-            if "@" in new_email:
-                student[5*i+2] = new_email
-            else:
-                print("Yeni emailiniz standartlara uyğun deyil!")
-                break
+            while True:
+                new_email = input("Yeni email adresinizi daxil edin: ")
+                if "@" in new_email:
+                    student[5*i+2] = new_email
+                    break
+                else:
+                    print("Yeni emailiniz standartlara uyğun deyil!")
 
-            new_telNumber = input("Yeni əlaqə nömrənizi daxil edin: +994")
-            if new_telNumber.isdigit() and len(new_telNumber) == 9:
-                student[5*i+3] = new_telNumber
-            else:
-                print("Yeni əlaqə nömrəniz standartlara uyğun deyil!")
-                break
+            while True:
+                new_telNumber = input("Yeni əlaqə nömrənizi daxil edin: +994")
+                if new_telNumber.isdigit() and len(new_telNumber) == 9:
+                    student[5*i+3] = new_telNumber
+                    break
+                else:
+                    print("Yeni əlaqə nömrəniz standartlara uyğun deyil!")
 
-            new_password = input("Şifrənizi yazın: ")
-            if new_password.isdigit() and 100 <= int(new_password) <= 999:
-                student[5*i+4] = new_password
-                print("Qeydiyyatınız uğurla başa çatdı!")
-            else:
-                print("Şifrə 3 rəqəmli ədəd olmalıdır!")
-                break
+            while True:
+                new_password = input("Şifrənizi yazın: ")
+                if new_password.isdigit() and 100 <= int(new_password) <= 999:
+                    student[5*i+4] = new_password
+                    print("Qeydiyyatınız uğurla başa çatdı!")
+                    break
+                else:
+                    print("Şifrə 3 rəqəmli ədəd olmalıdır!")
+
             showData(new_name)
             break
         else:
