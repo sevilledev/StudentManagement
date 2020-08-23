@@ -58,12 +58,11 @@ if n.isdigit():
                 break
             else:
                 print("Şifrə 3 rəqəmli ədəd olmalıdır!")
-                
-        print("Tələbələrin datalarının sistemə yerləşdirilmə prosesi sona çatdı!")
+
         s = createStudent(name, surname, email, telNumber, password)
 else:
     print("Tələbə sayı rəqəm vəya ədəd olmalıdır!")
-    
+
 print("Tələbələrin datalarının sistemə yerləşdirilmə prosesi sona çatdı!")
 
 # Tələbə adına görə tələbə məlumatlarının göstərilmə funksiyası:
@@ -108,7 +107,8 @@ def changeData(student_psw):
                     student[5*i] = new_name
                     break
                 else:
-                    print("Yeni adınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
+                    print(
+                        "Yeni adınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
 
             while True:
                 new_surname = input("Yeni soyadınızı daxil edin: ")
@@ -116,7 +116,8 @@ def changeData(student_psw):
                     student[5*i+1] = new_surname
                     break
                 else:
-                    print("Yeni soyadınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
+                    print(
+                        "Yeni soyadınızda ancaq əlifbanın hərflərindən istifadə edə bilərsiz!")
 
             while True:
                 new_email = input("Yeni email adresinizi daxil edin: ")
@@ -184,14 +185,13 @@ for i in range(10):
             "Datasını görmək istədiyiniz tələbənin adını daxil edin: ")
         showData(name_input)
     elif data == "2":
-        elif data == "2":
-        secret_psw=int(input("4-rəqəmli gizli şifrəni daxil edin: "))
         while True:
-            if secret_psw==2005:
+            secret_psw = int(input("4-rəqəmli gizli şifrəni daxil edin: "))
+            if secret_psw == 2005:
                 allData()
                 break
             else:
-                print("Yalnış şifrə!") 
+                print("Yanlış şifrə!")
     elif data == "3":
         psw_input = int(
             input("Datasını dəyişmək istədiyiniz tələbənin kodunu daxil edin: "))
